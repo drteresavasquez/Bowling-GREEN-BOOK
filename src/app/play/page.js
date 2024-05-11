@@ -54,7 +54,7 @@ export default function PlayView() {
 
   const submitOther = (e) => {
     e.preventDefault();
-    talkWithBot(`Where are the best locations in Bowling Green, KY to learn ${other}? Please give me at least 3 options and provide the address and reviews from other diners.`);
+    talkWithBot(`Where are the best locations in Bowling Green, KY to have fun doing ${other}? Please give me at least 3 options and provide the address and reviews from other diners.`);
     setOther('');
   }
 

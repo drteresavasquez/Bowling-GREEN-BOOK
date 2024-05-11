@@ -7,15 +7,15 @@ const eatOptions = [
   {
     option: "Entreprenuer",
     prompt:
-      "Where are the best locations in Bowling Green, KY to learn be an Entreprenuer? Please give me at least 3 options and provide the address and reviews from other diners.",
+      "Where are the best locations in Bowling Green, KY to to find support as an Entreprenuer? Please give me at least 3 options and provide the address and reviews from other diners.",
   },
   {
     option: "Tech",
-    prompt:  "Where are the best locations in Bowling Green, KY to work in tech? Please give me at least 3 options and provide the address and reviews from other diners.",
+    prompt:  "Where are the best locations in Bowling Green, KY to find a job in tech? Please give me at least 3 options and provide the address and reviews from other diners.",
   },
   {
     option: "Education",
-    prompt:  "Where are the best locations in Bowling Green, KY to work in education? Please give me at least 3 options and provide the address and reviews from other diners.",
+    prompt:  "Where are the best locations in Bowling Green, KY to find a job in education? Please give me at least 3 options and provide the address and reviews from other diners.",
   },
 ];
 
@@ -54,7 +54,7 @@ export default function WorkView() {
 
   const submitOther = (e) => {
     e.preventDefault();
-    talkWithBot(`Where are the best locations in Bowling Green, KY to learn ${other}? Please give me at least 3 options and provide the address and reviews from other diners.`);
+    talkWithBot(`Where are the best locations in Bowling Green, KY to find a job in ${other}? Please give me at least 3 options and provide the address and reviews from other diners.`);
     setOther('');
   }
 
