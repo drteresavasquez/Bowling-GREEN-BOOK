@@ -1,8 +1,8 @@
 "use client";
-import { Fragment } from "react";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Disclosure } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 
 const user = {
@@ -41,8 +41,11 @@ export default function Navigation() {
                 <div className="border-b border-lime-700">
                   <div className="flex h-16 items-center justify-between px-4 sm:px-0">
                     <div className="flex items-center">
+                    <div className="flex-shrink-0">
+                    📗 BOWLING GREEN BOOK
+                        </div>
                       <div className="hidden md:block">
-                        <div className="flex items-baseline space-x-4">
+                        <div className="ml-10 flex items-baseline space-x-4">
                           {navigation.map((item) => (
                             <a
                               key={item.name}
@@ -142,7 +145,7 @@ export default function Navigation() {
                   {navigation.map((item) => (
                     <Disclosure.Button
                       key={item.name}
-                      as="a"
+                      as={Link}
                       href={item.href}
                       className={classNames(
                         pathname === item.href
@@ -156,7 +159,7 @@ export default function Navigation() {
                     </Disclosure.Button>
                   ))}
                 </div>
-                <div className="border-t border-gray-700 pb-3 pt-4">
+                {/* <div className="border-t border-gray-700 pb-3 pt-4">
                   <div className="flex items-center px-5">
                     <div className="flex-shrink-0">
                       <img
@@ -194,18 +197,12 @@ export default function Navigation() {
                       </Disclosure.Button>
                     ))}
                   </div>
-                </div>
+                </div> */}
               </Disclosure.Panel>
             </>
           )}
         </Disclosure>
-        <header className="py-10">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h1 className="text-3xl font-bold tracking-tight text-white">
-              📗 Bowling GREEN BOOK
-            </h1>
-          </div>
-        </header>
+        
       </div>
     </div>
   );
